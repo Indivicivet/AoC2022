@@ -2,6 +2,8 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Optional, Callable
 
+from tqdm import tqdm
+
 
 @dataclass
 class Brainfuck:
@@ -17,6 +19,7 @@ class Brainfuck:
     ptr: int = 0
 
     def execute(self, code):
+        t = tqdm()
         if self.comma_callback is None and "," in code:
             raise ValueError(
                 "got code containing \",\", but comma_callback"
@@ -69,10 +72,11 @@ class Brainfuck:
             else:
                 raise ValueError(f"encountered invalid character {char!r}")
             code_ptr += 1
+            t.update(1)
 
 
 if __name__ == "__main__":
     bf = Brainfuck(comma_callback=lambda: 4)
-    bf.execute("+. >--. >+++[->+<]>. >,.")  #
+    bf.execute("+" * 999 + "[->+<]>" * 999)  #
     print(bf.tape)
     print(bf.outputs)
