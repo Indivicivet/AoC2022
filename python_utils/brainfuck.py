@@ -72,7 +72,7 @@ class Brainfuck:
 
 
 if __name__ == "__main__":
-    bf = Brainfuck()
-    bf.execute("+. >-. >+++[->+<]>.")  #
+    bf = Brainfuck(comma_callback=lambda: 4)
+    bf.execute("+. >--. >+++[->+<]>. >,.")  #
     print(bf.tape)
     print(bf.outputs)
