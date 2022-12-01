@@ -12,6 +12,7 @@ class Brainfuck:
 
     comma_callback: Optional[Callable[[], int]] = None
     period_callback: Optional[Callable[[int], None]] = None
+    ignore_other_characters: bool = True
     tape: defaultdict = field(default_factory=lambda: defaultdict(int))
     outputs: list = field(default_factory=list)
     ptr: int = 0
@@ -64,7 +65,7 @@ class Brainfuck:
                             brackets_depth += 1
                         elif char == "]":
                             brackets_depth -= 1
-            elif char in " \t\n":
+            elif char in " \t\n" or self.ignore_other_characters:
                 pass
             else:
                 raise ValueError(f"encountered invalid character {char!r}")
