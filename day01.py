@@ -15,7 +15,7 @@ def read_file():
 
 bf = brainfuck.Brainfuck(
     comma_callback=read_file().__next__,
-    period_callback=print,
+    # period_callback=print,
 )
 
 bf.execute("""
