@@ -30,3 +30,13 @@ while we're still in the file
 
 # part 1
 print(max(bf.outputs))
+
+bf_pt2 = brainfuck.Brainfuck(
+    comma_callback=iter(sorted(bf.outputs, reverse=True)).__next__,
+    period_callback=print,
+)
+
+bf_pt2.execute("""
++++
+[>,[->+<]<-]>>.
+""")
