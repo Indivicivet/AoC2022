@@ -2,10 +2,12 @@ from pathlib import Path
 
 from python_utils import brainfuck
 
+FOLDER = Path(__file__).parent
+
 
 def read_file():
     for line in (
-        Path("inputs") / "input_day01.txt"
+        FOLDER / "inputs" / "input_day01.txt"
     ).read_text().splitlines():
         yield int(line) if line else 0
     yield 0  # just to make my life easier ^^'
@@ -18,15 +20,7 @@ bf = brainfuck.Brainfuck(
     # period_callback=print,
 )
 
-bf.execute("""
-while we're still in the file
->+[
-    [
-        [-<+>]
-        ,  should deal with minus 1 better
-    ]<-> <.> 
->>,+]
-""")  # <<< <<[.<<]
+bf.execute((FOLDER / "day01_part1_sum_chunks.b").read_text())
 
 # part 1
 print(max(bf.outputs))
@@ -36,7 +30,4 @@ bf_pt2 = brainfuck.Brainfuck(
     period_callback=print,
 )
 
-bf_pt2.execute("""
-+++
-[>,[->+<]<-]>>.
-""")
+bf_pt2.execute((FOLDER / "day01_part2_sum3.b").read_text())
