@@ -1,6 +1,9 @@
+# python
 .idea/
-inputs/
 __pycache__
+
+# AoC specific
+inputs/
 
 # ghostwriter things...
 *.md.backup
