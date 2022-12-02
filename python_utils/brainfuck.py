@@ -1,6 +1,7 @@
 from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Optional, Callable
+from pathlib import Path
 
 
 @dataclass
@@ -70,6 +71,12 @@ class Brainfuck:
             else:
                 raise ValueError(f"encountered invalid character {char!r}")
             code_ptr += 1
+
+    def execute_file(self, path):
+        """
+        helper function to execute code in a .b file
+        """
+        self.execute(Path(path).read_text())
 
 
 if __name__ == "__main__":
