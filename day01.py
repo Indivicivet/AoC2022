@@ -20,7 +20,7 @@ bf = brainfuck.Brainfuck(
     # period_callback=print,
 )
 
-bf.execute((FOLDER / "day01_part1_sum_chunks.b").read_text())
+bf.execute_file(FOLDER / "day01_part1_sum_chunks.b")
 
 # part 1
 print(max(bf.outputs))
@@ -30,4 +30,4 @@ bf_pt2 = brainfuck.Brainfuck(
     period_callback=print,
 )
 
-bf_pt2.execute((FOLDER / "day01_part2_sum3.b").read_text())
+bf_pt2.execute_file(FOLDER / "day01_part2_sum3.b")
