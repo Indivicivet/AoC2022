@@ -1,3 +1,7 @@
 .idea/
 inputs/
 __pycache__
+
+# ghostwriter things...
+*.md.backup
+debug.log
