@@ -20,3 +20,7 @@ by hand in google docs/calculator
 in godot: pass the left half and right half of the background through each other, increasing the score whenever a collision happens. make a big explosion upon collision to remove duplicates
 
 ![part 1: lots of black boxes with letters, long orange rectangles and a score counter](/day03_part1_screenshot.png)
+
+### Part 2
+
+in python, code golfed to 106 bytes (loads a file called "3" in the same directory; there's a setup batch script to copy that from the inputs folder)
