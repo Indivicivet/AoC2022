@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var v = 50
-var right_side = false
+export var right_side = false
 
 #func _ready():
 	#pass
