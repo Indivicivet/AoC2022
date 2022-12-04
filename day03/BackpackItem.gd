@@ -33,10 +33,10 @@ func _area_entered(other):
 	if self.right_side:
 		# aviod double counting
 		return
+	if not other.has_node("RichTextLabel"):
+		return
 	var child = get_node("RichTextLabel")
 	var other_child = other.get_node("RichTextLabel")
-	if not child or not other_child:
-		return
 	if child.text != other_child.text:
 		return
 	Events.emit_signal("items_collided", child.text)
