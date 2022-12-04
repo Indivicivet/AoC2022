@@ -2,6 +2,7 @@ extends Area2D
 class_name BackpackItem
 
 
+var explosion_resource = preload("res://Explosion.tscn")
 var v = 50
 export var right_side = false
 var text setget set_text, get_text
@@ -35,12 +36,13 @@ func _area_entered(other):
 	var child = get_node("RichTextLabel")
 	var other_child = other.get_node("RichTextLabel")
 	if not child or not other_child:
-		print_debug("didn't get RichTextLabels")
-		print_debug(child)
-		print_debug(other_child)
 		return
 	if child.text != other_child.text:
 		return
 	Events.emit_signal("items_collided", child.text)
+	var explosion = explosion_resource.instance()
+	explosion.position = position
+	explosion.text = text
+	get_node("..").add_child(explosion)
 	other.queue_free()
 	queue_free()
