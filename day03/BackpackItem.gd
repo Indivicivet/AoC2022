@@ -1,4 +1,6 @@
 extends Area2D
+class_name BackpackItem
+
 
 var v = 50
 export var right_side = false
