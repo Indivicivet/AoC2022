@@ -10,7 +10,7 @@
 [node name="Score" type="RichTextLabel" parent="."]
 margin_left = 84.0
 margin_top = 18.0
-margin_right = 124.0
+margin_right = 541.0
 margin_bottom = 58.0
 script = ExtResource( 2 )
 
