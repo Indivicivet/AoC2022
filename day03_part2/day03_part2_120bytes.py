@@ -1,1 +1,0 @@
-with open("3")as f:q=f.readline;print(sum((ord(c)-96)%58for i in range(100)for c in{*q()[:-1]}&{*q()[:-1]}&{*q()[:-1]}))
