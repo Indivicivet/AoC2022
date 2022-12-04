@@ -1,1 +1,0 @@
-with open("3")as f:r=f.readlines();print(sum((c in r[i+1])*(c in r[i+2])*(ord(c)-96)%58for i in range(0,300,3)for c in{*r[i][:-1]}))
