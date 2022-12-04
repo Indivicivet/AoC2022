@@ -23,3 +23,5 @@ func _area_entered(other):
 	if child.text != other_child.text:
 		return
 	Events.emit_signal("items_collided", child.text)
+	other.queue_free()
+	queue_free()
