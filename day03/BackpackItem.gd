@@ -42,7 +42,7 @@ func _area_entered(other):
 	Events.emit_signal("items_collided", child.text)
 	var explosion = explosion_resource.instance()
 	explosion.position = position
-	explosion.text = text
+	explosion.text = child.text
 	get_node("..").add_child(explosion)
 	other.queue_free()
 	queue_free()
