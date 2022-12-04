@@ -44,5 +44,6 @@ func _area_entered(other):
 	explosion.position = position
 	explosion.text = child.text
 	get_node("..").add_child(explosion)
+	get_node("..").move_child(explosion, 0)
 	other.queue_free()
 	queue_free()
