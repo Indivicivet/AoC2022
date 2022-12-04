@@ -12,3 +12,6 @@ debug.log
 # godot
 .import/
 .mono/
+
+# golfing things/utils
+day03_part2/3
