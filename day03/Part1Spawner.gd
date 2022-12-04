@@ -17,7 +17,7 @@ func _ready():
 		for ii in range(line.length()):
 			var bp_item = backpack_item_resource.instance()
 			bp_item.text = line[ii]
-			bp_item.position = Vector2(ii * 21, jj * 21)
+			bp_item.position = Vector2(ii * 25, jj * 25)
 			if ii >= line.length() / 2:
 				bp_item.right_side = true
 			add_child(bp_item)
