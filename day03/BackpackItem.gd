@@ -1,6 +1,6 @@
 extends Area2D
 
-var v = 200
+var v = 50
 export var right_side = false
 export var text = "A" setget set_text
 
