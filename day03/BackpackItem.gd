@@ -10,4 +10,7 @@ func _process(delta):
 	self.position += Vector2(v * delta * (-1 if right_side else 1), 0)
 
 func _area_entered(other):
+	if self.right_side:
+		# aviod double counting
+		return
 	print_debug(other)
