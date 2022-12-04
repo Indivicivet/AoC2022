@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "BackpackItem",
+"language": "GDScript",
+"path": "res://BackpackItem.gd"
+} ]
+_global_script_class_icons={
+"BackpackItem": ""
+}
+
+[application]
+
+config/name="day03"
+run/main_scene="res://day03_part1.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Events="*res://Events.gd"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

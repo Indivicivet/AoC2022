@@ -8,3 +8,7 @@ inputs/
 # ghostwriter things...
 *.md.backup
 debug.log
+
+# godot
+.import/
+.mono/
