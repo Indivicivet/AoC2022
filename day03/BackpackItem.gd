@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 var v = 50
 export var right_side = false
@@ -7,6 +7,4 @@ export var right_side = false
 	#pass
 
 func _process(delta):
-	move_and_collide(
-		Vector2(v * delta * (-1 if right_side else 1), 0)
-	)
+	self.position += Vector2(v * delta * (-1 if right_side else 1), 0)
