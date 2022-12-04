@@ -1,7 +1,7 @@
 extends Area2D
 
 
-export var text_match = "A"
+var text = "A"
 
 
 func _ready():
@@ -9,8 +9,6 @@ func _ready():
 
 
 func _area_entered(other):
-	if not other is BackpackItem:
-		return
-	if other.text != text_match:
-		return
-	other.queue_free()
+	var child = other.get_node("RichTextLabel")
+	if child and child.text == text:
+		other.queue_free()
