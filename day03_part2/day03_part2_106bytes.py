@@ -1,0 +1,1 @@
+with open("3")as f:q=f.readline;print(sum((ord(c)-96)%58for _ in[1]*100for c in{*q()}&{*q()}&{*q()})-3000)
