@@ -1,6 +1,6 @@
 extends Area2D
 
-var v = 50
+var v = 200
 export var right_side = false
 
 func _ready():
