@@ -13,4 +13,10 @@ func _area_entered(other):
 	if self.right_side:
 		# aviod double counting
 		return
-	print_debug(other)
+	var child = get_node("RichTextLabel")
+	var other_child = other.get_node("RichTextLabel")
+	if not child or not other_child:
+		print_debug("didn't get RichTextLabels")
+		print_debug(child)
+		print_debug(other_child)
+	print_debug(child.text == other_child.text)
