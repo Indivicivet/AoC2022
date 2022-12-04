@@ -9,6 +9,7 @@ func _ready():
 
 
 func _area_entered(other):
-	var child = other.get_node("RichTextLabel")
-	if child and child.text == text:
+	if not other.has_node("RichTextLabel"):
+		return
+	if other.get_node("RichTextLabel").text == text:
 		other.queue_free()
