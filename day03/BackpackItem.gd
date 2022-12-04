@@ -2,16 +2,22 @@ extends Area2D
 
 var v = 50
 export var right_side = false
-export var text = "A" setget set_text
+var text setget set_text, get_text
 
 
 func set_text(new_text):
-	text = new_text
 	var child = get_node("RichTextLabel")
 	if not child:
 		print_debug("didn't get RichTextLabel")
 		return
 	child.text = new_text
+
+func get_text():
+	var child = get_node("RichTextLabel")
+	if not child:
+		print_debug("didn't get RichTextLabel")
+		return
+	return child.text
 
 
 func _ready():
