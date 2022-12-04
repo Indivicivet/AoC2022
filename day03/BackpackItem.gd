@@ -19,4 +19,7 @@ func _area_entered(other):
 		print_debug("didn't get RichTextLabels")
 		print_debug(child)
 		print_debug(other_child)
-	print_debug(child.text == other_child.text)
+		return
+	if child.text != other_child.text:
+		return
+	Events.emit_signal("items_collided", child.text)
