@@ -20,4 +20,6 @@ func _ready():
 			bp_item.position = Vector2(ii * 25, jj * 25)
 			if ii >= line.length() / 2:
 				bp_item.right_side = true
+			else:
+				bp_item.v += ii * 5 - 20
 			add_child(bp_item)
