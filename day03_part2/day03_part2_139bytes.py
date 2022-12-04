@@ -1,0 +1,1 @@
+with open("3")as f:r=f.readlines();print(sum((ord(c)-96)%58for x,y,z in zip(r[::3],r[1::3],r[2::3])for c in {*x[:-1]}if c in y and c in z))
