@@ -24,3 +24,13 @@ in godot: pass the left half and right half of the background through each other
 ### Part 2
 
 in python, code golfed to 106 bytes (loads a file called "3" in the same directory; there's a setup batch script to copy that from the inputs folder)
+
+## Day 4
+
+### Part 1
+
+work in progress: python + brainfuck
+
+## Day 5
+
+todo
