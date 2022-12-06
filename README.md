@@ -34,3 +34,11 @@ work in progress: python + brainfuck
 ## Day 5
 
 todo
+
+## Day 6
+
+by hand with pen + paper
+
+![part 1: dots under the first many letters, column count and calculations on the side](/day06_part1.jpg)
+
+![part 2: messy lines under letters in the middle, incorrect + correct calculations on the side](/day06_part2.jpg)
