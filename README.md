@@ -4,6 +4,14 @@ this year I am going to try to have fun. :)
 
 [reverse lookup](#reverse-lookup)
 
+[Day 1](#day-1)
+[Day 2](#day-2)
+[Day 3](#day-3)
+[Day 4](#day-4)
+[Day 5](#day-5)
+[Day 6](#day-6)
+[Day 7](#day-7)
+
 ## Day 1
 
 python with some arithmetic in brainfuck
