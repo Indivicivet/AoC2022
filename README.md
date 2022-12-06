@@ -62,6 +62,10 @@ this year I am going to try to have fun. :)
 
 python with some arithmetic in brainfuck
 
+[python code](/day01.py)
+[brainfuck "sum chunks" for part 1](/day01_part1_sum_chunks.b)
+[brainfuck "add 3 numbers"...](/day01_part2_sum3.b)
+
 ## Day 2
 
 by hand in google docs/calculator
@@ -75,11 +79,15 @@ by hand in google docs/calculator
 
 in godot: pass the left half and right half of the background through each other, increasing the score whenever a collision happens. make a big explosion upon collision to remove duplicates
 
+[godot project](/day03_part1/)
+
 ![part 1: lots of black boxes with letters, long orange rectangles and a score counter](/day03_part1_screenshot.png)
 
 ### 3-2
 
 in python, code golfed to 106 bytes (loads a file called "3" in the same directory; there's a setup batch script to copy that from the inputs folder)
+
+[python file](/day03_part2/day03_part2_106bytes.py)
 
 ## Day 4
 
