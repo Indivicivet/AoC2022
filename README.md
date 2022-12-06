@@ -101,6 +101,8 @@ by hand with pen + paper
 
 # Reverse Lookup
 
+days by language / method / etc
+
 ## godot
 
 - [day 3 part 1](#3-1)
