@@ -2,6 +2,8 @@
 
 this year I am going to try to have fun. :)
 
+[reverse lookup](#reverse-lookup)
+
 ## Day 1
 
 python with some arithmetic in brainfuck
@@ -42,3 +44,23 @@ by hand with pen + paper
 ![part 1: dots under the first many letters, column count and calculations on the side](/day06_part1.jpg)
 
 ![part 2: messy lines under letters in the middle, incorrect + correct calculations on the side](/day06_part2.jpg)
+
+# Reverse Lookup
+
+## godot
+
+- [day 3 part 1](#3-1)
+
+## python + brainfuck
+
+- [day 1](#day-1)
+- [day 4 part 1](#4-1)
+
+## python (gode colfed)
+
+- [day 3 part 2](#3-2) 106 bytes
+
+## minimal computer assistance
+
+- [day 2](#day-2) in google docs
+- [day 6](#day-6) by hand with pen + paper
