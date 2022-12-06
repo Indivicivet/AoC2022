@@ -85,9 +85,9 @@ in godot: pass the left half and right half of the background through each other
 
 ### 3-2
 
-in python, code golfed to 106 bytes (loads a file called "3" in the same directory; there's a setup batch script to copy that from the inputs folder)
+in python, code golfed to 95 bytes (loads a file called "3" in the same directory; there's a setup batch script to copy that from the inputs folder)
 
-[python file](/day03_part2/day03_part2_106bytes.py)
+[python file](/day03_part2/day03_part2_95bytes.py)
 
 ## Day 4
 
@@ -122,7 +122,7 @@ days by language / method / etc
 
 ## python (gode colfed)
 
-- [day 3 part 2](#3-2) 106 bytes
+- [day 3 part 2](#3-2) 95 bytes
 
 ## minimal computer assistance
 
