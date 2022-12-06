@@ -2,7 +2,7 @@
 
 this year I am going to try to have fun. :)
 
-[reverse lookup](#reverse-lookup)
+[reverse lookup](#reverse-lookup) (by language / method)
 
 [Day 1](#day-1)
 [Day 2](#day-2)
