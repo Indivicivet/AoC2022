@@ -1,10 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 640, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 30, 5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 50, 20 )
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0.560784, 0.654902, 0.717647, 1 )
+
+[sub_resource type="GradientTexture2D" id=4]
+gradient = SubResource( 5 )
+width = 100
+height = 40
 
 [node name="Node2D" type="Node2D"]
 
@@ -34,3 +46,12 @@ margin_top = -6.0
 margin_right = 36.0
 margin_bottom = 34.0
 text = "A"
+
+[node name="Magnet" type="KinematicBody2D" parent="."]
+position = Vector2( 338, 98 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Magnet"]
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Magnet"]
+texture = SubResource( 4 )
