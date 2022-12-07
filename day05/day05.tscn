@@ -15,6 +15,7 @@ position = Vector2( 640, 690 )
 shape = SubResource( 1 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Floor"]
+color = Color( 0.137255, 0.137255, 0.137255, 1 )
 polygon = PoolVector2Array( -640, -10, 640, -10, 640, 10, -640, 10 )
 
 [node name="Box" type="RigidBody2D" parent="."]
@@ -24,7 +25,7 @@ position = Vector2( 500, 500 )
 shape = SubResource( 2 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Box"]
-color = Color( 0.435294, 0.32549, 0, 1 )
+color = Color( 0.239216, 0.192157, 0.0627451, 1 )
 polygon = PoolVector2Array( -30, -5, 30, -5, 30, 5, -30, 5 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Box"]
