@@ -43,7 +43,9 @@ this year I am going to try to have fun. :)
 python with some arithmetic in brainfuck
 
 [python code](/day01.py)
+
 [brainfuck "sum chunks" for part 1](/day01_part1_sum_chunks.b)
+
 [brainfuck "add 3 numbers"...](/day01_part2_sum3.b)
 
 ## Day 2
