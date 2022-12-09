@@ -23,12 +23,16 @@ for line in data[1:]:
             (Path.cwd() / name).write_bytes(b"!" * int(value))
 
 
+def get_folder_size(folder):
+    return sum(
+        subitem.stat().st_size
+        for subitem in folder.rglob("*")
+    )
+
+
 under_100000_size = 0
 for item in ROOT.rglob("*"):
-    size = sum(
-        subitem.stat().st_size
-        for subitem in item.rglob("*")
-    )
+    size = get_folder_size(item)
     if size < 100000:
         under_100000_size += size
 print(under_100000_size)
