@@ -31,11 +31,11 @@ def get_folder_size(folder):
     )
 
 
-under_100000_size = 0
-for item in ROOT.rglob("*"):
-    size = get_folder_size(item)
-    if size < 100000:
-        under_100000_size += size
+under_100000_size = sum(
+    size
+    for item in ROOT.rglob("*")
+    if (size := get_folder_size(item)) <= 100000
+)
 print(under_100000_size)
 
 
