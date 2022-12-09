@@ -27,6 +27,7 @@ def get_folder_size(folder):
     return sum(
         subitem.stat().st_size
         for subitem in folder.rglob("*")
+        if subitem.is_file()
     )
 
 
