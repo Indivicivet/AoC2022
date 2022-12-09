@@ -89,6 +89,12 @@ by hand with pen + paper
 
 ![part 2: messy lines under letters in the middle, incorrect + correct calculations on the side](/day06_part2.jpg)
 
+## Day 7
+
+python (writing to/querying the filesystem, of course; only tested on windows)
+
+[python code](/day07.py)
+
 # Reverse Lookup
 
 days by language / method / etc
@@ -105,6 +111,10 @@ days by language / method / etc
 ## python (gode colfed)
 
 - [day 3 part 2](#3-2) 95 bytes
+
+## just python...
+
+- [day 7](#day-7)
 
 ## minimal computer assistance
 
