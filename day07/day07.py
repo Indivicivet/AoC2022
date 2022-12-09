@@ -37,3 +37,12 @@ for item in ROOT.rglob("*"):
     if size < 100000:
         under_100000_size += size
 print(under_100000_size)
+
+
+root_size = get_folder_size(ROOT)
+smallest_deletable_size = min(
+    size
+    for item in ROOT.rglob("*")
+    if (size := get_folder_size(item)) >= root_size - 40000000
+)
+print(smallest_deletable_size)
