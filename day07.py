@@ -2,11 +2,11 @@ import os
 from pathlib import Path
 
 data = (
-    Path(__file__).parent.parent / "inputs" / "input_day07.txt"
+    Path(__file__).parent / "inputs" / "input_day07.txt"
 ).read_text().splitlines()
 
 # create structure on filesystem
-ROOT = Path(__file__).parent / "working"
+ROOT = Path(__file__).parent / "day07_working"
 ROOT.mkdir(exist_ok=True, parents=True)
 os.chdir(ROOT)
 for line in data[1:]:

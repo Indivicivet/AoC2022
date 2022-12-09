@@ -13,5 +13,6 @@ debug.log
 .import/
 .mono/
 
-# golfing things/utils
+# golfing things/utils/specific days
 day03_part2/3
+day07_working
