@@ -4,6 +4,10 @@ whole_input := read_file(
     path_join "input_day09.txt"
 );
 
+tail_visited := [[0] ** 100] ** 100;
+tail_pos := [0, 0];
+head_pos := [0, 0];
+
 for (line <- lines whole_input) (
     print(line);
 )
