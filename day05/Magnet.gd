@@ -16,7 +16,7 @@ func _physics_process(delta):
 		var result_raydown = (
 			get_world_2d().direct_space_state.intersect_ray(
 				global_position,
-				global_position + Vector2(0, -800),
+				global_position + Vector2(0, 800),
 				[self]
 			)
 		)
