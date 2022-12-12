@@ -1,6 +1,9 @@
-x := read_file(
+whole_input := read_file(
     __file__.path_parent
     path_join "inputs"
     path_join "input_day09.txt"
 );
-print(x);
+
+for (line <- lines whole_input) (
+    print(line);
+)
