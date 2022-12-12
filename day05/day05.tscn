@@ -49,6 +49,23 @@ margin_right = 36.0
 margin_bottom = 34.0
 text = "A"
 
+[node name="Box2" type="RigidBody2D" parent="."]
+position = Vector2( 500, 400 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box2"]
+shape = SubResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Box2"]
+color = Color( 0.239216, 0.192157, 0.0627451, 1 )
+polygon = PoolVector2Array( -30, -5, 30, -5, 30, 5, -30, 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Box2"]
+margin_left = -4.0
+margin_top = -6.0
+margin_right = 36.0
+margin_bottom = 34.0
+text = "A"
+
 [node name="Magnet" type="KinematicBody2D" parent="."]
 position = Vector2( 338, 98 )
 script = ExtResource( 1 )
