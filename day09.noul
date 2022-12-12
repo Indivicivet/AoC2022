@@ -1,2 +1,6 @@
-x := read_file(__file__);
-print(__file__);
+x := read_file(
+    __file__.path_parent
+    path_join "inputs"
+    path_join "input_day09.txt"
+);
+print(x);
