@@ -9,5 +9,10 @@ tail_pos := [0, 0];
 head_pos := [0, 0];
 
 for (line <- lines whole_input) (
-    print (words line);
+    dir, amt := words line;
+    switch (dir)
+        case "U" -> (print "uwu")
+        case "D" -> (print "ddddd")
+        case "L" -> (print "Lefto")
+        case "R" -> (print "rightoo")
 )
