@@ -9,5 +9,5 @@ tail_pos := [0, 0];
 head_pos := [0, 0];
 
 for (line <- lines whole_input) (
-    print(line);
+    print (words line);
 )
