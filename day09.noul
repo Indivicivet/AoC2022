@@ -4,7 +4,9 @@ whole_input := read_file(
     path_join "input_day09.txt"
 );
 
-tail_visited := [[0] ** 100] ** 100;
+
+half_extent := 500;
+tail_visited := [[0] ** (half_extent * 2)] ** (half_extent * 2);
 tail_pos := V(0, 0);
 head_pos := V(0, 0);
 
