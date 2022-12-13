@@ -14,11 +14,11 @@ rope_positions := V(0, 0) ** ROPE_LENGTH;
 for (line <- lines whole_input) (
     dir, amt := words line;
     d := int(amt);
-    switch (dir)
-        case "U" -> (rope_positions[0] += V(0, d))
-        case "D" -> (rope_positions[0] += V(0, -d))
-        case "L" -> (rope_positions[0] += V(-d, 0))
-        case "R" -> (rope_positions[0] += V(d, 0))
+    rope_positions[0] += switch (dir)
+        case "U" -> V(0, d)
+        case "D" -> V(0, -d)
+        case "L" -> V(-d, 0)
+        case "R" -> V(d, 0)
         ;
     delta := rope_positions[0] - rope_positions[1];
     while ((abs(delta[0]) > 1) or (abs(delta[1]) > 1)) (
