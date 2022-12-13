@@ -39,4 +39,4 @@ for (line <- lines whole_input) (
     );
 );
 
-print ((tail_visited map sum) fold +);
+print (sum (tail_visited map sum));
