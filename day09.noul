@@ -5,14 +5,17 @@ whole_input := read_file(
 );
 
 tail_visited := [[0] ** 100] ** 100;
-tail_pos := [0, 0];
-head_pos := [0, 0];
+tail_pos := V(0, 0);
+head_pos := V(0, 0);
 
 for (line <- lines whole_input) (
     dir, amt := words line;
+    d := int(amt);
     switch (dir)
-        case "U" -> (print "uwu")
-        case "D" -> (print "ddddd")
-        case "L" -> (print "Lefto")
-        case "R" -> (print "rightoo")
-)
+        case "U" -> (head_pos += V(0, d))
+        case "D" -> (head_pos += V(0, -d))
+        case "L" -> (head_pos += V(-d, 0))
+        case "R" -> (head_pos += V(d, 0))
+);
+
+print head_pos
