@@ -30,7 +30,11 @@ for (line <- lines whole_input) (
             (if (delta[1] > 0) 1 else if (delta[1] < 0) -1 else 0)
         );
         delta = head_pos - tail_pos;
-        print delta;
+        tail_visited[
+            half_extent + tail_pos[0]
+        ][
+            half_extent + tail_pos[1]
+        ] = 1;
     );
 );
 
