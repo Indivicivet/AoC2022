@@ -23,7 +23,7 @@ for (line <- lines whole_input) (
     delta := head_pos - tail_pos;
     while (abs(delta[0]) > 1 or abs(delta[0] > 1)) (        
         # only ever need to make one diagonal step
-        tail_pos += if (delta[0] != 0 or delta[1] != 0) V(
+        tail_pos += if (delta[0] != 0 and delta[1] != 0) V(
             (if (delta[0] > 0) 1 else -1),
             (if (delta[1] > 0) 1 else -1)
         ) else V(
