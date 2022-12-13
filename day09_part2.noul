@@ -21,7 +21,7 @@ for (line <- lines whole_input) (
         case "L" -> V(-d, 0)
         case "R" -> V(d, 0)
         ;
-    for (knot_i <- [0]) (  # todo :: ROPE_LENGTH
+    for (knot_i <- 0 to ROPE_LENGTH - 2) (
         delta := rope_positions[knot_i] - rope_positions[knot_i + 1];
         while ((abs(delta[0]) > 1) or (abs(delta[1]) > 1)) (
             # only ever need to make one diagonal step
