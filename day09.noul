@@ -38,4 +38,4 @@ for (line <- lines whole_input) (
     );
 );
 
-print head_pos
+print (map(tail_visited, fold +) fold +);
