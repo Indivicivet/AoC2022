@@ -5,10 +5,11 @@ whole_input := read_file(
 );
 
 
+ROPE_LENGTH := 2;
 half_extent := 500;
 tail_visited := [[0] ** (half_extent * 2)] ** (half_extent * 2);
 tail_visited[half_extent][half_extent] = 1;
-rope_positions := V(0, 0) ** 2;
+rope_positions := V(0, 0) ** ROPE_LENGTH;
 
 for (line <- lines whole_input) (
     dir, amt := words line;
