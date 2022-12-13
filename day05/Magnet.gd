@@ -20,7 +20,7 @@ func _physics_process(delta):
 				[self]
 			)
 		)
-		if result_raydown:
+		if result_raydown and result_raydown.collider is RigidBody2D:
 			print("hello")
 			result_raydown.collider.gravity_scale = -1.0
 
