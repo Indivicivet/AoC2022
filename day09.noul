@@ -18,18 +18,14 @@ for (line <- lines whole_input) (
         case "R" -> (head_pos += V(d, 0))
         ;
     delta := head_pos - tail_pos;
-    while (abs(delta[0]) > 1 or abs(delta[0] > 1)) (
-        if (delta[0] != 0 or delta[1] != 0) (
-            # only ever need to make on diagonal step
-            head_pos += V(
-                (if (delta[0] < 0) 1 else -1),
-                (if (delta[1] < 0) 1 else -1)
-            );
-        ) else (
-            head_pos += V(
-                (if (delta[0] < 0) 1 else if (delta[0] > 0) -1 else 0),
-                (if (delta[1] < 0) 1 else if (delta[1] > 0) -1 else 0)
-            );
+    while (abs(delta[0]) > 1 or abs(delta[0] > 1)) (        
+        # only ever need to make one diagonal step
+        head_pos += if (delta[0] != 0 or delta[1] != 0) V(
+            (if (delta[0] < 0) 1 else -1),
+            (if (delta[1] < 0) 1 else -1)
+        ) else V(
+            (if (delta[0] < 0) 1 else if (delta[0] > 0) -1 else 0),
+            (if (delta[1] < 0) 1 else if (delta[1] > 0) -1 else 0)
         );
         delta = head_pos - tail_pos;
         print delta;
