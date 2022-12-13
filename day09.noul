@@ -7,6 +7,7 @@ whole_input := read_file(
 
 half_extent := 500;
 tail_visited := [[0] ** (half_extent * 2)] ** (half_extent * 2);
+tail_visited[half_extent][half_extent] = 1;
 tail_pos := V(0, 0);
 head_pos := V(0, 0);
 
