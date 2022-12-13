@@ -22,5 +22,5 @@ func _physics_process(delta):
 		)
 		if result_raydown:
 			print("hello")
-			result_raydown.collider.parent.transform.y -= 200 * delta;
-		
+			result_raydown.collider.gravity_scale = -1.0
+
