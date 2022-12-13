@@ -1,0 +1,42 @@
+whole_input := read_file(
+    __file__.path_parent
+    path_join "inputs"
+    path_join "input_day09.txt"
+);
+
+
+half_extent := 500;
+tail_visited := [[0] ** (half_extent * 2)] ** (half_extent * 2);
+tail_visited[half_extent][half_extent] = 1;
+tail_pos := V(0, 0);
+head_pos := V(0, 0);
+
+for (line <- lines whole_input) (
+    dir, amt := words line;
+    d := int(amt);
+    switch (dir)
+        case "U" -> (head_pos += V(0, d))
+        case "D" -> (head_pos += V(0, -d))
+        case "L" -> (head_pos += V(-d, 0))
+        case "R" -> (head_pos += V(d, 0))
+        ;
+    delta := head_pos - tail_pos;
+    while ((abs(delta[0]) > 1) or (abs(delta[1]) > 1)) (
+        # only ever need to make one diagonal step
+        tail_pos += if (delta[0] != 0 and delta[1] != 0) V(
+            (if (delta[0] > 0) 1 else -1),
+            (if (delta[1] > 0) 1 else -1)
+        ) else V(
+            (if (delta[0] > 0) 1 else if (delta[0] < 0) -1 else 0),
+            (if (delta[1] > 0) 1 else if (delta[1] < 0) -1 else 0)
+        );
+        delta = head_pos - tail_pos;
+        tail_visited[
+            half_extent + tail_pos[0]
+        ][
+            half_extent + tail_pos[1]
+        ] = 1;
+    );
+);
+
+print (sum (tail_visited map sum));
