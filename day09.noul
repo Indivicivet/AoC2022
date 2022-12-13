@@ -21,7 +21,7 @@ for (line <- lines whole_input) (
         case "R" -> (head_pos += V(d, 0))
         ;
     delta := head_pos - tail_pos;
-    while (abs(delta[0]) > 1 or abs(delta[0]) > 1) (        
+    while ((abs(delta[0]) > 1) or (abs(delta[1]) > 1)) (        
         # only ever need to make one diagonal step
         tail_pos += if (delta[0] != 0 and delta[1] != 0) V(
             (if (delta[0] > 0) 1 else -1),
