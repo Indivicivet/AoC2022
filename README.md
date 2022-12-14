@@ -105,7 +105,7 @@ in (the rather nice, I think?) [noulith](https://github.com/betaveros/noulith) l
 
 [part 1](/day09_part1.noul)
 
-[part 2](/day09_part2.noul)
+[part 2](/day09_part2.noul) which does act as a generalization of part 1, but also has slightly less clean code
 
 # Reverse Lookup
 
