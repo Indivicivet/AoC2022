@@ -26,11 +26,9 @@ print(sum(
     if a < b
 ))
 
-# not the prettiest, but...
-divider1 = IntCompList([IntCompList([2])])
-divider2 = IntCompList([IntCompList([6])])
-sorted_packets = sorted(packets + [divider1, divider2])
+dividers = [IntCompList([IntCompList([n])]) for n in [2, 6]]
+sorted_packets = sorted(packets + dividers)
 print(
-    (sorted_packets.index(divider1) + 1)
-    * (sorted_packets.index(divider2) + 1)
+    (sorted_packets.index(dividers[0]) + 1)
+    * (sorted_packets.index(dividers[1]) + 1)
 )
