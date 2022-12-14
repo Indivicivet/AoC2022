@@ -130,7 +130,7 @@ days by language / method / etc
 
 ## just python...
 
-- [day 7](#day-7)
+- [day 7](#day-7) (+ filesystem!)
 - [day 10](#day-10)
 
 ## noulith
