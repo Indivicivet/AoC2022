@@ -24,12 +24,10 @@ class CPU:
     pending: list[Instruction] = field(default_factory=list)
 
     def cycle(self):
-        for instruction in self.pending[:]:
-            instruction.remaining_cycles -= 1
-            if not instruction.remaining_cycles:
-                self.x = instruction.action(self.x)
-                print(instruction.action(0))
-                self.pending.remove(instruction)
+        self.pending[0].remaining_cycles -= 1
+        if not self.pending[0].remaining_cycles:
+            self.x = self.pending[0].action(self.x)
+            self.pending.pop(0)
 
 
 data = (
@@ -38,12 +36,17 @@ data = (
 print(len(data.splitlines()))
 SELECT_SIGNAL_STRENGTHS = [20, 60, 100, 140, 180, 220]
 
-cpu = CPU()
+cpu = CPU(
+    pending=[
+        Instruction.from_str(line)
+        for line in data.splitlines()
+    ],
+)
+
 signal_strength_total = 0
-for i, line in enumerate(data.splitlines() + ["noop"] * 3):
-    cpu.pending.append(Instruction.from_str(line))
+for i in range(1, max(SELECT_SIGNAL_STRENGTHS) + 1):
+    cpu.cycle()
     if i + 1 in SELECT_SIGNAL_STRENGTHS:
         print(i + 1, cpu.x)
         signal_strength_total += (i + 1) * cpu.x
-    cpu.cycle()
 print(signal_strength_total)
