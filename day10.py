@@ -2,6 +2,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Callable
 
+import numpy as np
+from PIL import Image
+
 
 @dataclass
 class Instruction:
@@ -45,8 +48,12 @@ cpu = CPU(
 )
 
 signal_strength_total = 0
+image = np.zeros((6, 40))
 for i in range(1, 241):
+    x = (i - 1) % 40
+    image[(i - 1) // 40, x] = cpu.x in [x - 1, x, x + 1]
     cpu.cycle()
     if i + 1 in SELECT_SIGNAL_STRENGTHS:
         signal_strength_total += (i + 1) * cpu.x
 print(signal_strength_total)
+Image.fromarray(image * 255).show()
