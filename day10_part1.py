@@ -33,7 +33,7 @@ class CPU:
 data = (
     Path(__file__).parent / "inputs" / "input_day10.txt"
 ).read_text()
-print(len(data.splitlines()))
+
 SELECT_SIGNAL_STRENGTHS = [20, 60, 100, 140, 180, 220]
 
 cpu = CPU(
@@ -47,6 +47,5 @@ signal_strength_total = 0
 for i in range(1, max(SELECT_SIGNAL_STRENGTHS) + 1):
     cpu.cycle()
     if i + 1 in SELECT_SIGNAL_STRENGTHS:
-        print(i + 1, cpu.x)
         signal_strength_total += (i + 1) * cpu.x
 print(signal_strength_total)
