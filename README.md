@@ -99,6 +99,14 @@ python (writing to/querying the filesystem, of course; only tested on windows)
 
 wip...
 
+## Day 9
+
+in (the rather nice, I think?) [noulith](https://github.com/betaveros/noulith) language by betaveros, the Advent of Code (current) #1 ranked user. [their webpage](https://beta.vero.site/) / [their github](https://github.com/betaveros/)
+
+[part 1](/day09_part1.noul)
+
+[part 2](/day09_part2.noul)
+
 # Reverse Lookup
 
 days by language / method / etc
