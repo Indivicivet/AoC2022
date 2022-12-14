@@ -24,10 +24,11 @@ class CPU:
     pending: list[Instruction] = field(default_factory=list)
 
     def cycle(self):
-        self.pending[0].remaining_cycles -= 1
-        if not self.pending[0].remaining_cycles:
-            self.x = self.pending[0].action(self.x)
-            self.pending.pop(0)
+        head, *tail = self.pending
+        head.remaining_cycles -= 1
+        if not head.remaining_cycles:
+            self.x = head.action(self.x)
+            self.pending = tail
 
 
 data = (
