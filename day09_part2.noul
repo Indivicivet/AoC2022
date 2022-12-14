@@ -34,13 +34,14 @@ for (line <- lines whole_input) (
                     (if (delta[1] > 0) 1 else if (delta[1] < 0) -1 else 0)
                 );
                 delta = rope_positions[knot_i] - rope_positions[knot_i + 1];
-                tail_visited[
-                    half_extent + rope_positions[ROPE_LENGTH - 1][0]
-                ][
-                    half_extent + rope_positions[ROPE_LENGTH - 1][1]
-                ] = 1;
             );
         );
+        # we're only moving one at a time
+        tail_visited[
+            half_extent + rope_positions[ROPE_LENGTH - 1][0]
+        ][
+            half_extent + rope_positions[ROPE_LENGTH - 1][1]
+        ] = 1;
     );
 );
 
