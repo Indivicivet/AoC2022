@@ -95,6 +95,10 @@ python (writing to/querying the filesystem, of course; only tested on windows)
 
 [python code](/day07.py)
 
+## Day 8
+
+wip...
+
 # Reverse Lookup
 
 days by language / method / etc
