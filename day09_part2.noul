@@ -1,0 +1,48 @@
+whole_input := read_file(
+    __file__.path_parent
+    path_join "inputs"
+    path_join "input_day09.txt"
+);
+
+
+ROPE_LENGTH := 10;
+half_extent := 500;
+tail_visited := [[0] ** (half_extent * 2)] ** (half_extent * 2);
+tail_visited[half_extent][half_extent] = 1;
+rope_positions := [V(0, 0)] ** ROPE_LENGTH;
+print rope_positions;
+
+for (line <- lines whole_input) (
+    dir, amt := words line;
+    d := int(amt);
+    for (_ <- 1 to d) (
+        rope_positions[0] += switch (dir)
+            case "U" -> V(0, 1)
+            case "D" -> V(0, -1)
+            case "L" -> V(-1, 0)
+            case "R" -> V(1, 0)
+            ;
+        for (knot_i <- 0 to ROPE_LENGTH - 2) (
+            delta := rope_positions[knot_i] - rope_positions[knot_i + 1];
+            if ((abs(delta[0]) > 1) or (abs(delta[1]) > 1)) (
+                # only ever need to make one diagonal step
+                rope_positions[knot_i + 1] += if (delta[0] != 0 and delta[1] != 0) V(
+                    (if (delta[0] > 0) 1 else -1),
+                    (if (delta[1] > 0) 1 else -1)
+                ) else V(
+                    (if (delta[0] > 0) 1 else if (delta[0] < 0) -1 else 0),
+                    (if (delta[1] > 0) 1 else if (delta[1] < 0) -1 else 0)
+                );
+                delta = rope_positions[knot_i] - rope_positions[knot_i + 1];
+            );
+        );
+        # we're only moving one at a time
+        tail_visited[
+            half_extent + rope_positions[ROPE_LENGTH - 1][0]
+        ][
+            half_extent + rope_positions[ROPE_LENGTH - 1][1]
+        ] = 1;
+    );
+);
+
+print (sum (tail_visited map sum));
