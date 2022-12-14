@@ -8,9 +8,9 @@ def force_list(x):
 
 
 class IntCompList(list):
-    __lt__ = lambda self, other: super().__lt__(force_list(other))
-    __gt__ = lambda self, other: super().__gt__(force_list(other))
-    __eq__ = lambda self, other: super().__eq__(force_list(other))
+    __lt__ = lambda self, x: super().__lt__(force_list(x))
+    __gt__ = lambda self, x: super().__gt__(force_list(x))
+    __eq__ = lambda self, x: super().__eq__(force_list(x))
 
 
 packet_pairs = [
