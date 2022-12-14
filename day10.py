@@ -50,8 +50,7 @@ cpu = CPU(
 signal_strength_total = 0
 image = np.zeros((6, 40))
 for i in range(240):
-    x = i % 40
-    image.flat[i] = cpu.x in [x - 1, x, x + 1]
+    image.flat[i] = abs(cpu.x - (i % 40)) <= 1
     if i + 1 in SELECT_SIGNAL_STRENGTHS:
         signal_strength_total += (i + 1) * cpu.x
     cpu.cycle()
