@@ -3,9 +3,11 @@ from pathlib import Path
 
 class IntCompList(list):
     def __lt__(self, other):
-        if isinstance(other, int):
-            return self < [other]
-        return super().__lt__(other)
+        return super().__lt__(
+            [other]
+            if isinstance(other, int)
+            else other
+        )
 
     def __gt__(self, other):
         if isinstance(other, int):
