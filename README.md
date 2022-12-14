@@ -111,6 +111,10 @@ in (the rather nice, I think?) [noulith](https://github.com/betaveros/noulith) l
 
 in python and very boring, although at least I define sensible classes? [python code](/day10.py)
 
+## Day 13
+
+just plain python. trying to make it look easy since python *almost* solves this question out of the box, just not quite... [python code](/day13.py)
+
 # Reverse Lookup
 
 days by language / method / etc
@@ -132,6 +136,7 @@ days by language / method / etc
 
 - [day 7](#day-7) (+ filesystem!)
 - [day 10](#day-10)
+- [day 13](#day-13)
 
 ## noulith
 
