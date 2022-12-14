@@ -12,6 +12,11 @@ class IntCompList(list):
             return self > [other]
         return super().__gt__(other)
 
+    def __eq__(self, other):
+        if isinstance(other, int):
+            return self == [other]
+        return super().__eq__(other)
+
 
 packet_pairs = [
     pair.splitlines()
