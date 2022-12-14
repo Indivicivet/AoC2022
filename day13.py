@@ -1,23 +1,21 @@
 from pathlib import Path
 
 
+def force_list(x):
+    if isinstance(x, int):
+        return [x]
+    return x
+
+
 class IntCompList(list):
     def __lt__(self, other):
-        return super().__lt__(
-            [other]
-            if isinstance(other, int)
-            else other
-        )
+        return super().__lt__(force_list(other))
 
     def __gt__(self, other):
-        if isinstance(other, int):
-            return self > [other]
-        return super().__gt__(other)
+        return super().__gt__(force_list(other))
 
     def __eq__(self, other):
-        if isinstance(other, int):
-            return self == [other]
-        return super().__eq__(other)
+        return super().__eq__(force_list(other))
 
 
 packet_pairs = [
