@@ -128,6 +128,12 @@ days by language / method / etc
 
 - [day 7](#day-7)
 
+## noulith
+
+this is the language [noulith](https://github.com/betaveros/noulith) written by betaveros, the Advent of Code (current) #1 ranked user. [their webpage](https://beta.vero.site/) / [their github](https://github.com/betaveros/)
+
+- [day 9](#day-9)
+
 ## minimal computer assistance
 
 - [day 2](#day-2) in google docs
