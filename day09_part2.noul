@@ -24,7 +24,7 @@ for (line <- lines whole_input) (
             ;
         for (knot_i <- 0 to ROPE_LENGTH - 2) (
             delta := rope_positions[knot_i] - rope_positions[knot_i + 1];
-            while ((abs(delta[0]) > 1) or (abs(delta[1]) > 1)) (
+            if ((abs(delta[0]) > 1) or (abs(delta[1]) > 1)) (
                 # only ever need to make one diagonal step
                 rope_positions[knot_i + 1] += if (delta[0] != 0 and delta[1] != 0) V(
                     (if (delta[0] > 0) 1 else -1),
