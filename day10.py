@@ -45,7 +45,7 @@ cpu = CPU(
 )
 
 signal_strength_total = 0
-for i in range(1, max(SELECT_SIGNAL_STRENGTHS) + 1):
+for i in range(1, 241):
     cpu.cycle()
     if i + 1 in SELECT_SIGNAL_STRENGTHS:
         signal_strength_total += (i + 1) * cpu.x
