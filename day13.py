@@ -13,15 +13,29 @@ class IntCompList(list):
     __eq__ = lambda self, x: super().__eq__(force_list(x))
 
 
+input_comparable = (
+    Path(__file__).parent / "inputs" / "input_day13.txt"
+).read_text().replace("[", "IntCompList([").replace("]", "])")
+
 packet_pairs = [
     pair.splitlines()
-    for pair in (
-        Path(__file__).parent / "inputs" / "input_day13.txt"
-    ).read_text().replace("[", "IntCompList([").replace("]", "])").split("\n\n")
+    for pair in input_comparable.split("\n\n")
 ]
-
 print(sum(
     i + 1
     for i, (a, b) in enumerate(packet_pairs)
     if eval(a) < eval(b)
 ))
+
+# not the prettiest, but...
+divider1 = IntCompList([IntCompList([2])])
+divider2 = IntCompList([IntCompList([6])])
+sorted_packets = sorted([
+    eval(line)
+    for line in input_comparable.splitlines()
+    if line
+] + [divider1, divider2])
+print(
+    (sorted_packets.index(divider1) + 1)
+    * (sorted_packets.index(divider2) + 1)
+)
