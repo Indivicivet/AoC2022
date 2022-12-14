@@ -107,6 +107,10 @@ in (the rather nice, I think?) [noulith](https://github.com/betaveros/noulith) l
 
 [part 2](/day09_part2.noul) which does act as a generalization of part 1, but also has slightly less clean code
 
+## Day 10
+
+in python and very boring, although at least I define sensible classes? [python code](/day10.py)
+
 # Reverse Lookup
 
 days by language / method / etc
@@ -127,6 +131,7 @@ days by language / method / etc
 ## just python...
 
 - [day 7](#day-7)
+- [day 10](#day-10)
 
 ## noulith
 
