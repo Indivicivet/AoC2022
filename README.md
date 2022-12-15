@@ -121,6 +121,8 @@ the right/finish section is navigating up a spiral of all letters, and I did thi
 
 I had an off-by-two error which I fixed by going via z at the end, although the problem statement says that's the same elevation as the end point... I'm not sure how else I managed to create a shorter route :/
 
+the second part is very easy. you only have to pick the optimal starting "a" point from the far left column, since there are no b's other than in the second column. you can then read off how many vertical steps you skipped by comparing to the start point and subtract that from the part 1 answer.
+
 ## Day 13
 
 just plain python. trying to make it look easy since python *almost* solves this question out of the box, just not quite... [python code](/day13.py)
