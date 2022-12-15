@@ -119,6 +119,8 @@ by hand with pen + paper
 
 the right/finish section is navigating up a spiral of all letters, and I did this first, to get to d/e -- there is only one d/e area you can get to. I did this first, and it tells you where you have to aim for. the left/start section is just navagating a sea of c's; you can never drop into an a-hole because there are no b's to get back out. the route is super simple once you block off all the a's (ignore the part where I made a mistake...).
 
+I had an off-by-two error which I fixed by going via z at the end, although the problem statement says that's the same elevation as the end point... I'm not sure how else I managed to create a shorter route :/
+
 ## Day 13
 
 just plain python. trying to make it look easy since python *almost* solves this question out of the box, just not quite... [python code](/day13.py)
