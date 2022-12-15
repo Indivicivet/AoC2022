@@ -156,8 +156,11 @@ this is the language [noulith](https://github.com/betaveros/noulith) written by 
 
 - [day 9](#day-9)
 
-## minimal computer assistance
+## google docs
 
-- [day 2](#day-2) in google docs
+- [day 2](#day-2) in google docs (+google calculator)
+
+## pen + paper
+
 - [day 6](#day-6) by hand with pen + paper
-- [day 12](#day-12) by hand with pen + paper
+- [day 12](#day-12) by hand with pen + paper (+ highlighter)
