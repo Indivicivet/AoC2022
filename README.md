@@ -160,3 +160,4 @@ this is the language [noulith](https://github.com/betaveros/noulith) written by 
 
 - [day 2](#day-2) in google docs
 - [day 6](#day-6) by hand with pen + paper
+- [day 12](#day-12) by hand with pen + paper
