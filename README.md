@@ -186,3 +186,4 @@ this is the language [noulith](https://github.com/betaveros/noulith) written by 
 
 - [day 6](#day-6) by hand with pen + paper
 - [day 12](#day-12) by hand with pen + paper (+ highlighter)
+- [day 16](#day-16) pen + paper, plus a spreadsheet for actual value calculations
