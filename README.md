@@ -127,6 +127,28 @@ the second part is very easy. you only have to pick the optimal starting "a" poi
 
 just plain python. trying to make it look easy since python *almost* solves this question out of the box, just not quite... [python code](/day13.py)
 
+## Day 16
+
+by hand on pen + paper, using a spreadsheet for the actual value calculations
+
+### 16-1
+
+first draw out all of the valves and tunnels...
+
+![messy page with many two-letter valve names and connecting lines](/day16/day16_part1_1.jpg)
+
+then find the links between the valves you actually care about (ones with flow rate > 0; the majority of valves are flow rate 0 and just act as intermediate points)...
+
+![the same page but with nonzero flow rate valves circled in green, and connected to each other in orange](/day16/day16_part1_2.jpg)
+
+redraw just the nonzero flow rate valves (and distances) on a new page, highlight the 20+ and 10+ flow rate valves, scribble some candidate paths...
+
+![a neater page showing a graph with fewer links, where high-value nodes are highlighted](/day16/day16_part1_4.jpg)
+
+at this point there were three obvious candidate paths: two ways of rushing straight to a long chain of high values, and another way which gets a couple of very high values quickly but requires doubling back on yourself. I calculated the resulting score for these three paths with [a spreadsheet](/day16/day16_part1_calculations/.ods):
+
+![spreadsheet calculating the score from magnitudes and times, with a section for each candidate path](/day16/day16_part1_calculations_screenshot.ods)
+
 # Reverse Lookup
 
 days by language / method / etc
