@@ -27,7 +27,7 @@ class MultMultMonkey:
         )
 
     def pop_item(self):
-        return self.items.pop()
+        return self.items.pop(0)
 
     def receive(self, val):
         self.items.append(val)

@@ -2,7 +2,7 @@
 
 class PlusPlusMonkey {
     public:
-    std::vector<int> items;
+    std::list<int> items;
     int add_amount;
     int divisible_test;
     int true_target;
@@ -10,7 +10,7 @@ class PlusPlusMonkey {
     int inspected = 0;
 
     PlusPlusMonkey(
-        std::vector<int> items,
+        std::list<int> items,
         int add_amount,
         int divisible_test,
         int true_target,
@@ -24,8 +24,8 @@ class PlusPlusMonkey {
     {}
 
     int pop_item() {
-        const auto x = items.back();
-        items.pop_back();
+        const auto x = items.front();
+        items.pop_front();
         return x;
     }
 
