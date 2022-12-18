@@ -1,7 +1,9 @@
 import re
+from dataclasses import dataclass
 from pathlib import Path
 
 
+@dataclass
 class MultMultMonkey:
     items: list[int]
     mult_by: int
@@ -30,4 +32,17 @@ for i, monkey_str in enumerate(monkey_strs):
         find_numbers(line)[0]
         for line in lines[2:]
     ]
-    print(items, op_value)
+    if "*" in monkey_str:
+        monkeys.append(
+            MultMultMonkey(
+                items,
+                op_value,
+                div_test,
+                true_target,
+                false_target,
+            )
+        )
+    else:
+        monkeys.append(None)  # c++ time
+
+print(monkeys)
