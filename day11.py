@@ -82,3 +82,9 @@ for round_i in range(20):
             worry_level = monkey.pop_item()
             worry2 = monkey.next_worry(worry_level) // 3
             monkeys[monkey.throw_to(worry2)].receive(worry2)
+
+top_inspections = sorted(
+    [m.inspected for m in monkeys],
+    reverse=True,
+)
+print(top_inspections[0] * top_inspections[1])
