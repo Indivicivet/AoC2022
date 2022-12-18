@@ -34,6 +34,7 @@ class PlusPlusMonkey {
     }
 
     int next_worry(int worry) {
+        inspected++;
         return worry + add_amount;
     }
 
