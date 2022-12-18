@@ -32,4 +32,12 @@ class PlusPlusMonkey {
     void receive(int item) {
         items.push_back(item);
     }
+
+    int next_worry(int worry) {
+        return worry + add_amount;
+    }
+
+    int throw_to(int worry) {
+        return (worry % divisible_test) ? false_target : true_target;
+    }
 };
