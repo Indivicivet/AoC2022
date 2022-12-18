@@ -9,4 +9,14 @@ data = [
     ).read_text().splitlines()
 ]
 
-print(data)
+for pos in data:
+    try:
+        print(ops.Cube([1.01] * 3).translate(pos))
+    except:
+        print(f"boop {pos}")
+
+obj = ops.Union([
+    ops.Cube([1.01] * 3).translate(pos)
+    for pos in data
+])
+obj.write("day18.scad")
