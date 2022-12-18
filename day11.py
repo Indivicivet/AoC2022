@@ -12,6 +12,7 @@ class MultMultMonkey:
     divisible_test: int
     true_target: int
     false_target: int
+    inspected: int = 0
 
 
 cppyy.cppdef(Path("day11_++monkey.cpp").read_text())

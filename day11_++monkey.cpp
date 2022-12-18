@@ -7,6 +7,7 @@ class PlusPlusMonkey {
     int divisible_test;
     int true_target;
     int false_target;
+    int inspected = 0;
 
     PlusPlusMonkey(
         std::vector<int> items,
