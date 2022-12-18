@@ -15,6 +15,7 @@ class MultMultMonkey:
     inspected: int = 0
 
     def next_worry(self, worry):
+        self.inspected += 1
         if self.mult_by == "SQUARE":
             return worry ** 2
         return worry * self.mult_by
