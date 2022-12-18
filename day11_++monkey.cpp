@@ -22,4 +22,14 @@ class PlusPlusMonkey {
     , true_target(true_target)
     , false_target(false_target)
     {}
+
+    int pop_item() {
+        const auto x = items.back();
+        items.pop_back();
+        return x;
+    }
+
+    void receive(int item) {
+        items.push_back(item);
+    }
 };

@@ -14,6 +14,24 @@ class MultMultMonkey:
     false_target: int
     inspected: int = 0
 
+    def next_worry(self, worry):
+        if self.mult_by == "SQUARE":
+            return worry ** 2
+        return worry * self.mult_by
+
+    def throw_to(self, val):
+        return (
+            self.false_target
+            if val % self.divisible_test
+            else self.true_target
+        )
+
+    def pop_item(self):
+        return self.items.pop()
+
+    def receive(self, val):
+        self.items.append(val)
+
 
 cppyy.cppdef(Path("day11_++monkey.cpp").read_text())
 from cppyy.gbl import PlusPlusMonkey
@@ -60,4 +78,13 @@ for i, monkey_str in enumerate(monkey_strs):
             )
         )
 
-print(monkeys)
+for monkey in monkeys:
+    print(monkey.items)
+
+
+for round_i in range(20):
+    for monkey in monkeys:
+        while monkey.items:
+            worry_level = monkey.pop_item()
+            worry2 = monkey.next_worry(worry_level) // 3
+            monkeys[monkey.throw_to(worry2)].receive(worry2)
