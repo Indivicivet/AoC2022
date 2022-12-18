@@ -2,6 +2,8 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
+import cppyy
+
 
 @dataclass
 class MultMultMonkey:
@@ -10,6 +12,10 @@ class MultMultMonkey:
     divisible_test: int
     true_target: int
     false_target: int
+
+
+cppyy.cppdef(Path("day11_++monkey.cpp").read_text())
+from cppyy.gbl import PlusPlusMonkey
 
 
 monkey_strs = (
@@ -43,6 +49,14 @@ for i, monkey_str in enumerate(monkey_strs):
             )
         )
     else:
-        monkeys.append(None)  # c++ time
+        monkeys.append(
+            PlusPlusMonkey(
+                items,
+                op_value,
+                div_test,
+                true_target,
+                false_target,
+            )
+        )
 
 print(monkeys)
