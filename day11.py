@@ -57,26 +57,19 @@ for i, monkey_str in enumerate(monkey_strs):
         find_numbers(line)[0]
         for line in lines[2:]
     ]
-    if "*" in monkey_str:
-        monkeys.append(
-            MultMultMonkey(
-                items,
-                op_value,
-                div_test,
-                true_target,
-                false_target,
-            )
+    monkeys.append(
+        (
+            PlusPlusMonkey
+            if "+" in monkey_str
+            else MultMultMonkey
+        )(
+            items,
+            op_value,
+            div_test,
+            true_target,
+            false_target,
         )
-    else:
-        monkeys.append(
-            PlusPlusMonkey(
-                items,
-                op_value,
-                div_test,
-                true_target,
-                false_target,
-            )
-        )
+    )
 
 for monkey in monkeys:
     print(monkey.items)
