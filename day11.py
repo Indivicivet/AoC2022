@@ -16,7 +16,10 @@ monkey_strs = (
 
 
 def find_numbers(s):
-    return [int(x) for x in re.findall(r"\d+", s)]
+    return (
+        [int(x) for x in re.findall(r"\d+", s)]
+        or ["SQUARE"]  # nonsense special case old * old
+    )
 
 
 monkeys = []
