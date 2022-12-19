@@ -170,6 +170,10 @@ days by language / method / etc
 - [day 1](#day-1)
 - [day 4 part 1](#4-1)
 
+## python + C++
+
+- [day 11 part 1](#11-1)
+
 ## python (gode colfed)
 
 - [day 3 part 2](#3-2) 95 bytes
