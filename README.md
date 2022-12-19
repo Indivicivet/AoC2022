@@ -111,6 +111,14 @@ in (the rather nice, I think?) [noulith](https://github.com/betaveros/noulith) l
 
 in python and very boring, although at least I define sensible classes? [python code](/day10.py)
 
+## Day 11
+
+### 11-1
+
+in python and C++ via [cppyy](https://cppyy.readthedocs.io/en/latest/index.html), which lets you create runtime python / C++ bindings.
+
+the [python file](/day11_part1.py) does most of the work: parse the input, run the rounds, and define the logic for the monkeys that multiply worry level (`MultMultMonkey`s). the logic for the monkeys that add to worry level are implemented in the [C++ file](/day11_++monkey.cpp).
+
 ## Day 12
 
 by hand with pen + paper
