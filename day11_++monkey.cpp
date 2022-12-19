@@ -2,6 +2,8 @@
 
 class PlusPlusMonkey {
     public:
+    // we use a vector since initializer list construction from cppyy
+    // doesn't work for std::list :(
     std::vector<uint64_t> items;
     uint64_t add_amount;
     int divisible_test;
