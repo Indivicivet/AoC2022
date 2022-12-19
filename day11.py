@@ -72,9 +72,6 @@ for i, monkey_str in enumerate(monkey_strs):
         )
     )
 
-for monkey in monkeys:
-    print(monkey.items)
-
 
 for round_i in range(20):
     for monkey in monkeys:
